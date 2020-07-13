@@ -45,7 +45,7 @@ La aplicación ya debería estar corriendo en http://localhost:3000/
 
 - Cada uno de estos resultados tendrá un link a /items/{id}, al clickearse la imagen o el título, seteo el path location en /items/{id}, y pageContent renderizará la vista de detalle de producto.
 
-- Al montarse el componente de detalle de producto, toma el id desde el path location, y llama a mi endpoint /items para obtener los datos del mismo.
+- Al montarse el componente de detalle de producto, toma el id desde el path location, y llama a mi endpoint /items para obtener los datos del mismo. De esta forma también funciona al ingresar directamente un id de producto en la url.
 
 ## Consideraciones:
 
