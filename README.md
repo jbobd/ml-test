@@ -47,7 +47,7 @@ La aplicación ya debería estar corriendo en http://localhost:3000/
 
 - Al montarse el componente de detalle de producto, toma el id desde el path location, y llama a mi endpoint /items para obtener los datos del mismo.
 
-##Consideraciones:
+## Consideraciones:
 
 - Toda la funcionalidad descrita funciona correctamente; Excepto en el caso de realizar una nueva búsqueda desde la vista de detalle de producto. Como workaround, para poder hacer una nueva búsqueda, es necesario volver al home. De momento no he podido aún solucionarlo. Considero que tengo alguna falla en el manejo del lifecycle method del ProductDetail.
 - Ciertas reglas de sass se podrían haber obviado mediante el uso de variables, por temas de tiempos  no pude hacer emprolijar esta parte.
