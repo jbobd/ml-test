@@ -1,0 +1,12 @@
+.breadcrumb {
+  font-size: 14px;
+  display: inline;
+  color: #666;
+  &:not(:last-child)::after {
+    padding: 5px;
+    content: ">";
+  }
+  &:last-child{
+      font-weight: bold;
+  }
+}

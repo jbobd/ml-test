@@ -1,0 +1,17 @@
+@media (max-width: 480px) {
+  .breadcrumb_container {
+    flex-wrap: wrap;
+  }
+}
+.results_container {
+  display: inline-block;
+  flex: 0 1 1000px;
+  align-items: center;
+  padding: 0 0 32px 0;
+}
+
+.breadcrumb_container {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}

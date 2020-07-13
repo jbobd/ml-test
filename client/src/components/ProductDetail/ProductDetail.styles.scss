@@ -1,0 +1,112 @@
+.results_container {
+  display: inline-block;
+  flex: 0 1 1000px;
+  align-items: center;
+  padding: 0 0 32px 0;
+}
+
+.breadcrumb_container {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.product_container {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  padding: 0 0 32px 32px;
+
+  .product_header {
+    display: flex;
+    //flex-direction: row;
+    .product_data {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      .product_data_header {
+        padding: 0 70px 0 0;
+        .product_condition_qty {
+          margin: 32px 0 0 0;
+          font-weight: 400;
+          font-size: 14px;
+          .product_condition::after {
+            content: "-";
+            padding: 5px;
+          }
+          .product_qty::after {
+            padding: 5px;
+            content: "vendidos";
+          }
+        }
+        .product_title {
+          font-size: 24px;
+          margin: 16px 0 0 0;
+        }
+        .product_price {
+          font-size: 46px;
+          font-weight: 400;
+          margin: 32px 0 32px 0;
+          &::before {
+            content: "$";
+            padding: 0 5px 0 0;
+          }
+        }
+      }
+
+      .product_buy_btn {
+        background-color: #3483fa;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        height: 35px;
+        width: calc(100% - 32px);
+        border-radius: 4px;
+        max-width: 300px;
+      }
+    }
+  }
+  .product_description {
+    .product_description_title {
+      margin: 0 0 32px 0;
+      font-size: 28px;
+      font-weight: 400;
+    }
+    .product_description_text {
+      max-width: 680px;
+      color: #666;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .product_image {
+    width: 680px;
+  }
+}
+
+@media (max-width: 699px) {
+  .product_container {
+    align-items: center;
+    .product_header {
+      flex-direction: column;
+      max-width: 80%;
+      .product_image {
+        width: 80%;
+      }
+    }
+    .product_description {
+      max-width: 80%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb_container {
+    flex-wrap: wrap;
+  }
+}

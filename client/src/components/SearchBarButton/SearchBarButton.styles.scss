@@ -1,0 +1,25 @@
+
+.SearchButton {
+  white-space: nowrap;
+  display: flex;
+  border: 0px;
+  border-radius: 0px 5px 5px 0;
+  background-color: #eee;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  outline:none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.search_icon_container{
+  align-self: center;
+  min-width:20px;
+  width:80%;
+}
+
+.search_icon {
+  width:100%;
+}
