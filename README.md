@@ -22,15 +22,15 @@ Clonar el repositorio y luego realizar lo siguiente:
 ## server
 
 ``` 
-cd client 
+cd server 
 npm install 
 npm run dev 
  ```
 
-## server
+## client
 
 ``` 
-cd server
+cd client
 npm install
 npm start 
 ```
