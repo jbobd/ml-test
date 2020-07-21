@@ -18,40 +18,29 @@ const ProductDetail = ({ item }) => {
   const [state, setState] = useContext(AppContext);
 
   //Al montarse el componente realizo la llamada a mi api para obtener los datos del producto
-  const detailProduct = async () => {
-    let product = await getProduct(urlPathId);
-    setState({ ...state, currentItem: product.data });
-  };
 
-  useEffect(() => detailProduct(), []);
+  useEffect(() => {
+    async function fetchData() {
+      const product = await getProduct(urlPathId);
+      await setState({ ...state, currentItem: product.data });
+    }
+    fetchData();
+  }, []);
 
-  /* 
-  Aquí estuve haciendo pruebas con useEffect para hacer funcionar la busqueda
-  desde la vista de detalle de producto
-  */
-
-  // useEffect(
-  //   () => async () => {
-  //     console.log("mounted");
-  //     let product = await getProduct(urlPathId);
-  //     setState({
-  //       ...state,
-  //       currentItem: product.data,
-  //     });
-  //   },
-  //   []
-  // );
-
-  // useEffect(() => {
-  //   return () => {
-  //     setState({
-  //       ...state,
-  //       currentItem: { items: { price: {} }, categories: [] },
-  //     });
-  //     console.log("cleaned up");
-  //     console.log(state);
-  //   };
-  // }, []);
+  //Prueba para limpiar state al desmontar
+  //Al utilizarlo, searchResults mostraba resultados viejos
+  /*
+  useEffect(() => {
+    return () => {
+      setState({
+        ...state,
+        currentItem: { items: { price: {} }, categories: [] },
+      });
+      console.log("productDetail unmounted. State= ");
+      console.log(state);
+    };
+  }, []);
+*/
 
   if (!state.currentItem.items.picture) {
     return <div>Cargando..</div>;
