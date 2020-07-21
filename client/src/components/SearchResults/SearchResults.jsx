@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 
 import BreadCrumb from "../BreadCrumb/BreadCrumb";
 
 import ProductFromListing from "../ProductFromListing/ProductFromListing";
 
+import AppContext from "../../contexts/appContext";
+
 import "./searchResults.styles.scss";
 
 const SearchResults = ({ data }) => {
+  const [state, setState] = useContext(AppContext);
+
+  //prueba para limpiar el state al desmontar
+  /* 
+  useEffect(() => {
+    return () => {
+      setState({
+        ...state,
+        searchResults: "",
+      });
+      console.log("cleaned up");
+    };
+  }, []);
+*/
+
+
   if (!data.items) {
     return <div>Cargando..</div>;
   } else {

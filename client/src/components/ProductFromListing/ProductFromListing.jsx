@@ -2,8 +2,6 @@ import React from "react";
 
 import { useHistory } from "react-router-dom";
 
-import { getProduct } from "../../utils/apiCalls";
-
 import ShippingIcon from "../../assets/PNG/ic_shipping.png";
 
 import "./ProductFromListing.scss";
@@ -23,7 +21,6 @@ const ProductFromListing = ({
 
   const itemDetail = async (id) => {
     history.push(`/items/${id}`);
-    await getProduct(id);
   };
 
   return (

@@ -8,7 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./App.css";
 
-const docTitle = "Mercado Libre - Test"
+const docTitle = "Mercado Libre - Test";
 
 const AppContextInit = {
   searchResults: { categories: [], items: [] },
@@ -17,7 +17,7 @@ const AppContextInit = {
 
 const App = () => {
   const [state, setState] = useState(AppContextInit);
-  //console.log(state);
+  console.log(state);
 
   document.title = docTitle;
 
