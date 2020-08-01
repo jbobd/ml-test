@@ -4,7 +4,7 @@ Esta app es un mini clon de Mercado Libre. Con funcionalidad de búsqueda y vist
 Para realizarla utilicé el siguiente stack:
 
 *Cliente:*
-* js ES7
+* js
 * React w/ Hooks
 * scss
 
